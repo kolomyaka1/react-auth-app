@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import React from 'react'
 
+type Props = {
+  title: string
+  handleClick : (email: string, pass: string) => void
+}
 
-
-export const Form = ({title, handleClick}) => {
+export const Form = ({title, handleClick}: Props) => {
 
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
